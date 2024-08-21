@@ -10,6 +10,14 @@ This example shows how the number of deacons selected would vary.  If 0 deacons 
 ### The static part:
 The Gospel is always started with "The Lord be with you" (assuming this is English, which could be another option to change), and then the Gospel read, regardless of who reads it.
 
+### Project Initial Mockup:
+![Initial Mockup Part 1](./app/static/images/initial_0.png)
+![Initial Mockup Part 1](./app/static/images/initial_1.png)
+
+### Changing the Dropdowns affecting the Application:
+![Initial Mockup with 1 Deacon](./app/static/images/initial_2.png)
+![Initial Mockup with 2 Deacons](./app/static/images/initial_3.png)
+
 
 ## Setup Instructions
 
