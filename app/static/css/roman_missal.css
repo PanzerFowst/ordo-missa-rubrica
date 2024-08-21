@@ -145,6 +145,12 @@ p {
     /* Increased font size for main content */
 }
 
+.rubrics {
+    font-style: italic;
+    color: #ff3333;
+    /* Example color for rubrics text */
+}
+
 /* Blockquote */
 blockquote {
     font-family: 'Palatino Linotype', serif;
