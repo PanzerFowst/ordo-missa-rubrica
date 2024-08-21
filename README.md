@@ -3,6 +3,11 @@
 ## Summary:
 The idea of this project is to have some sort of front-end display that shows the Rubrics for the Order of the Mass with sliders / options to adjust how many deacons (a dropdown with 0, 1, or 2), how many servers (a number box with way to increment and decrement the total number of servers), and maybe a few other options and how who does what changes based on each variation.
 
+## TODOs:
+- Figure out a good way to use the backend logic...  Getting a start in the `/app/ordo_missa/parishes/epiphany/` directory...
+- Pretty up the front end to make it look more like a Roman Missal...
+- Add in Mass types (Solemnity High, Solemnity Low, weekday, etc.) dropdown...
+
 ## Example using the Gospel Reading:
 This project would need to have the ability to dynamically update certain parts of the Ordo while also having static or constant parts that don't change between options.
 ### The dynamic part:
