@@ -1,13 +1,13 @@
 # /app/ordo_missa/parishes/epiphany/mass_text.py
 
 from ordo_missa.ordo_missa_abc import OrdoMissaABC
+from .introductory_rites import introductory_rites
 
 
 class Epiphany(OrdoMissaABC):
 
     def introductory_rites(self) -> str:
-        return """Welcome to the Mass at The Church of St. Agnes. Introductory Rites...
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
+        return introductory_rites(self.num_deacons, self.num_servers)
 
     def liturgy_of_the_word(self) -> str:
         return f"""Liturgy of the Word for St. Agnes... {
