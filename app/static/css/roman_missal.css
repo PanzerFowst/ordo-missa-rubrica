@@ -1,0 +1,168 @@
+/* General Body Styles */
+body {
+    font-family: 'Garamond', serif;
+    /* Traditional font */
+    background-color: #fdf5e6;
+    /* Antique white/parchment color */
+    color: #2b1b0e;
+    /* Dark brown text color */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.publicdomainpictures.net/pictures/10000/nahled/parchment-paper.jpg');
+    /* Parchment background */
+    background-size: cover;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background for content area */
+    border: 2px solid #d2b48c;
+    /* Tan border to mimic gilding */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    font-family: 'Goudy Old Style', serif;
+    /* Traditional serif font */
+    font-size: 2.5em;
+    text-align: center;
+    color: #800000;
+    /* Deep red, reminiscent of rubric text */
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form row styling */
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Dropdown and input styling */
+select,
+input[type="number"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Garamond', serif;
+    /* Matching font */
+    font-size: 1.1em;
+}
+
+/* Button styling */
+button {
+    background-color: #800000;
+    /* Deep red color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Garamond', serif;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    /* Align button to the left */
+}
+
+button:hover {
+    background-color: #a00;
+    /* Slightly lighter red for hover effect */
+}
+
+/* Result section styling */
+h3 {
+    font-family: 'Goudy Old Style', serif;
+    /* Traditional serif font */
+    font-size: 1.8em;
+    color: #800000;
+    margin-top: 30px;
+}
+
+/* Preformatted Text */
+pre {
+    font-family: 'Garamond', serif;
+    font-size: 1.1em;
+    white-space: pre-wrap;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    color: #333;
+}
+
+/* Drop Caps */
+p:first-letter {
+    font-size: 3em;
+    float: left;
+    padding-right: 8px;
+    margin-top: 0;
+    color: #800000;
+    font-family: 'Goudy Initialen', serif;
+    /* Ornate font for drop caps */
+    line-height: 1;
+    /* Align the letter to the top of the line */
+}
+
+/* Section Headers */
+h4 {
+    margin-top: 30px;
+    /* Reduced buffer space above each section */
+    margin-bottom: 10px;
+    /* Space below the header */
+    font-size: 1.5em;
+    /* Adjust as needed */
+    color: #800000;
+    /* Deep red for section headers */
+    border-top: 2px solid #d2b48c;
+    /* Optional: Border under headers for emphasis */
+    padding-bottom: 0px;
+    /* Space between text and border */
+}
+
+/* Paragraphs under section headers */
+p {
+    margin-top: 0;
+    /* Remove default margin on top of paragraphs */
+    margin-bottom: 20px;
+    /* Space between paragraphs */
+    font-size: 1.2em;
+    /* Increased font size for main content */
+}
+
+/* Blockquote */
+blockquote {
+    font-family: 'Palatino Linotype', serif;
+    font-style: italic;
+    color: #2b1b0e;
+    border-left: 4px solid #d2b48c;
+    margin: 20px;
+    padding-left: 15px;
+}
+
+/* Footnotes */
+footer {
+    font-size: 0.9em;
+    color: #4b2e14;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #d2b48c;
+}
+
+/* Custom Font (Optional) */
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&family=Goudy+Old+Style:wght@400;700&display=swap');

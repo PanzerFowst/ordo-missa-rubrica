@@ -1,0 +1,7 @@
+# Special /.vscode/ excludes:
+# /.vscode/settings.json
+
+# Python Virtual Environment exludes:
+/.venv/
+
+**/__pycache__/

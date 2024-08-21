@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Rubrics Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/roman_missal.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mass Rubrics Generator</h1>
+        <form id="rubricsForm">
+            <!-- Parish Selection with Default Blank Option -->
+            <div class="form-row">
+                <label for="parish">Select Parish:</label>
+                <select id="parish" name="parish" required>
+                    <option value="" selected>--</option>
+                    <option value="st_agnes">St. Agnes</option>
+                    <option value="epiphany">Epiphany</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <!-- Deacon Dropdown and Servers Input Side by Side -->
+            <div class="form-row">
+                <div>
+                    <label for="num_deacons">Number of Deacons:</label>
+                    <select id="num_deacons" name="num_deacons" required>
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="num_servers">Number of Servers:</label>
+                    <input type="number" id="num_servers" name="num_servers" min="0" value="2" required>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-row">
+                <button type="submit">Generate</button>
+            </div>
+        </form>
+
+        <h3>Generated Text:</h3>
+        <div id="result">
+            <!-- Result will be populated here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('rubricsForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const parish = document.getElementById('parish').value;
+            const numDeacons = document.getElementById('num_deacons').value;
+            const numServers = document.getElementById('num_servers').value;
+
+            fetch('/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `parish=${parish}&num_deacons=${numDeacons}&num_servers=${numServers}`,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        document.getElementById('result').innerHTML = `<p class="error">Error: ${data.error}</p>`;
+                    } else {
+                        const { introductory_rites, liturgy_of_the_word, liturgy_of_the_eucharist, communion_rite, concluding_rites } = data;
+                        document.getElementById('result').innerHTML = `
+                            <h4>Introductory Rites</h4>
+                            <p>${introductory_rites || 'No text available'}</p>
+                            <h4>Liturgy of the Word</h4>
+                            <p>${liturgy_of_the_word || 'No text available'}</p>
+                            <h4>Liturgy of the Eucharist</h4>
+                            <p>${liturgy_of_the_eucharist || 'No text available'}</p>
+                            <h4>Communion Rite</h4>
+                            <p>${communion_rite || 'No text available'}</p>
+                            <h4>Concluding Rites</h4>
+                            <p>${concluding_rites || 'No text available'}</p>
+                        `;
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

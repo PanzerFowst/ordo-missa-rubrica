@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flask: Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}${pathSeparator}app${pathSeparator}ordo_missa_rubrica.py",
+            "console": "integratedTerminal",
+            "env": {
+                "FLASK_APP": "app${pathSeparator}ordo_missa_rubrica.py", // Path to your Flask app module relative to the workspace folder
+                "FLASK_ENV": "development",
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                "PYTHONDONTWRITEBYTECODE": "1", // Prevent Python from writing bytecode files (e.g.: __pycache__ folders)
+            },
+            "args": [
+                "run",
+                // "--no-reload", // Optional: Disable auto-reloading for debugging
+            ],
+            "justMyCode": true,
+        }
+    ]
+}

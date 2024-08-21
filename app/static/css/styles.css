@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+    font-family: "Georgia", serif;
+    background-color: #f4f4f4;
+    color: #3b3b3b;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header styling */
+h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 2.5em;
+    text-align: center;
+    color: #6b0d0c;
+    /* Dark red/maroon color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between rows */
+}
+
+/* Form row styling */
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Space between items in a row */
+}
+
+/* Dropdown and input styling */
+select,
+input[type="number"] {
+    flex: 1;
+    /* Allow the input to take up the remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Georgia", serif;
+    font-size: 1.1em;
+}
+
+/* Button styling */
+button {
+    background-color: #6b0d0c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: "Georgia", serif;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    /* Align button to the left */
+}
+
+button:hover {
+    background-color: #8b0e0e;
+}
+
+/* Result section styling */
+h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 1.8em;
+    color: #6b0d0c;
+    margin-top: 30px;
+}
+
+pre {
+    font-family: "Georgia", serif;
+    font-size: 1.1em;
+    white-space: pre-wrap;
+    /* Allows text to wrap within the container */
+    background-color: #f8f8f8;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    color: #333;
+}
