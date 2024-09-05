@@ -75,5 +75,6 @@ To get started with the Ordo Missa Rubrica project, follow these steps:
    - Alternatively, use VS Code's debugging features:
      - Navigate to the **Run and Debug** sidebar (left sidebar) and click **Run and Debug**.
      - Or, press `Ctrl + F5` to start the debugger without breakpoints.
+   - If a problem occurs, try using Python 3.12.
 
 You should now be able to view and interact with the Ordo Missa Rubrica app in your browser.
