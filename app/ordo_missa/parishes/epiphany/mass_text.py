@@ -1,13 +1,13 @@
 # /app/ordo_missa/parishes/epiphany/mass_text.py
 
 from ordo_missa.ordo_missa_abc import OrdoMissaABC
-from .introductory_rites import introductory_rites
 
 
 class Epiphany(OrdoMissaABC):
 
     def introductory_rites(self) -> str:
-        return introductory_rites(self.num_deacons, self.num_servers)
+        # return introductory_rites(self.num_deacons, self.num_servers)
+        return ""
 
     def liturgy_of_the_word(self) -> str:
         return f"""Liturgy of the Word for St. Agnes... {

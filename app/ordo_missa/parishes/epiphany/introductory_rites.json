@@ -1,0 +1,39 @@
+{
+    "welcome_message": "Welcome to the Mass at The Church of the Epiphany.",
+    "procession": {
+        "base_message": "The procession starts. The priest ",
+        "deacon_part": {
+            "condition": {
+                "field": "num_deacons",
+                "greater_than": 0
+            },
+            "text_options": {
+                "1": "deacon on his right side, ",
+                "2": "deacon of the Word and the deacon of the Eucharist on each of his sides, "
+            }
+        },
+        "priest_part": "processes from the back of the Church to the sanctuary.",
+        "servers_part": {
+            "condition": {
+                "field": "num_servers",
+                "greater_than": 0
+            },
+            "base_text": " The {server_or_servers} lead{lead_s} the clergy in the procession. The {crucifer} processes with the crucifix.",
+            "variables": {
+                "server_or_servers": {
+                    "1": "server",
+                    "greater_than_1": "servers"
+                },
+                "lead_s": {
+                    "1": "s",
+                    "greater_than_1": ""
+                },
+                "crucifer": {
+                    "1": "Server",
+                    "2": "Second Master",
+                    "default": "Crucifer"
+                }
+            }
+        }
+    }
+}
