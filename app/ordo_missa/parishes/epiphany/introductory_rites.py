@@ -12,14 +12,14 @@ Welcome to the Mass at The Church of the Epiphany.
 
 def procession(num_deacons: int, num_servers: int) -> str:
 
-    procession_str: str = "The procession starts.  The priest "
+    procession_str: str = "The procession starts.  The priest"
     if num_deacons > 0:
         procession_str += ", joined by the "
         if num_deacons == 1:
             procession_str += "deacon on his right side, "
         elif num_deacons == 2:
             procession_str += "deacon of the Word and the deacon of the Eucharist on each of his sides, "
-    procession_str += "processes from the back of the Church to the sanctuary."
+    procession_str += " processes from the back of the Church to the sanctuary."
 
     if num_servers > 0:
 
